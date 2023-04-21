@@ -1,6 +1,6 @@
-import { UserMenu } from 'components/UserMenu/UserMenu';
-import { Navigation } from '../Navigation/Navigation';
-import { AuthNav } from 'components/AuthNav/AuthNav';
+import { UserMenu } from 'components/UserNavigation/UserMenu';
+import { Navigation } from './Navigation';
+import { AuthNav } from 'components/UserNavigation/AuthNav';
 import { useAuth } from 'hooks/userAuth';
 
 export const Header = () => {
