@@ -7,12 +7,12 @@ export const HeaderWrap = styled.header`
   margin-left: auto;
   justify-content: space-between;
   display: flex;
-  background-color: grey;
+  background-color: #b5d4f5;
   align-items: center;
 `;
 
 export const Link = styled(NavLink)`
-  background-color: #007bff;
+  background-color: #0056b3;
   border: none;
   color: #fff;
   padding: 10px 20px;
@@ -23,7 +23,7 @@ export const Link = styled(NavLink)`
   border-radius: 5px;
   transition: background-color 0.3s ease-in-out;
   &.active {
-    background-color: #0056b3;
+    background-color: #007bff;
   }
 `;
 
@@ -41,16 +41,17 @@ export const AuthWrap = styled.div`
   gap: 10px;
   display: flex;
 `;
+
 export const P = styled.p`
   padding: 8px 16px;
   text-decoration: none;
-  color: black;
+  color: #fff;
   font-weight: 500;
   margin: 0;
 `;
 
 export const Button = styled.button`
-  background-color: #007bff;
+  background-color: #0069d9;
   border: none;
   color: #fff;
   padding: 10px 20px;
@@ -61,6 +62,6 @@ export const Button = styled.button`
   border-radius: 5px;
   transition: background-color 0.3s ease-in-out;
   &:hover {
-    background-color: #0069d9;
+    background-color: #007bff;
   }
 `;
