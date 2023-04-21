@@ -3,8 +3,9 @@ import * as Yup from 'yup';
 import { Form, Field, ErrorMessage, Label, Button } from './ContactForm.styled';
 
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contatcs/operations';
+import { selectContact } from 'redux/contatcs/selectors';
 
 const schema = Yup.object().shape({
   name: Yup.string().required(),
@@ -13,12 +14,21 @@ const schema = Yup.object().shape({
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
+  const contactsState = useSelector(selectContact);
 
   return (
     <Formik
       initialValues={{ name: '', number: '' }}
       validationSchema={schema}
       onSubmit={(values, { resetForm }) => {
+        const chekContact = contactsState.find(
+          contactState => contactState.name === values.name
+        );
+        if (chekContact) {
+          alert(`${values.name} is alteady in contacts`);
+          resetForm();
+          return;
+        }
         dispatch(addContact(values));
         resetForm();
       }}

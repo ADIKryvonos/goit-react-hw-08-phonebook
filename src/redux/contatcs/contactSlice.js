@@ -31,12 +31,6 @@ const contactSlice = createSlice({
       .addCase(addContact.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        const chekContact = state.contacts.find(
-          contact => contact.name === action.payload.name
-        );
-        if (chekContact) {
-          return alert(chekContact.name + ' is already in contact');
-        }
         state.contacts.push(action.payload);
       })
       .addCase(addContact.rejected, statusRejected)

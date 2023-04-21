@@ -1,14 +1,17 @@
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 import { Header } from 'components/UserNavigation/Header';
+import { MainWrap } from './Layout.styled';
 
 export const Layout = () => {
   return (
-    <div>
+    <>
       <Header />
       <Suspense fallback={null}>
-        <Outlet />
+        <MainWrap>
+          <Outlet />
+        </MainWrap>
       </Suspense>
-    </div>
+    </>
   );
 };
