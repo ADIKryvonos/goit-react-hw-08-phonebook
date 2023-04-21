@@ -3,13 +3,14 @@ import styled from 'styled-components';
 export const List = styled.ul`
   list-style: none;
   padding-left: 0;
+  width: 400px;
 `;
 
 export const Item = styled.li`
   font-size: 25px;
   padding-bottom: 10px;
   display: flex;
-
+  justify-content: space-between;
   align-items: center;
 
   svg {

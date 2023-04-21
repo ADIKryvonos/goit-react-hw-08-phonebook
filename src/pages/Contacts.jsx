@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/contatcs/operations';
 import { selectError, selectIsLoading } from 'redux/contatcs/selectors';
+import { Loader } from 'components/Loader/Loader';
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -18,10 +19,15 @@ export default function Contacts() {
   return (
     <div>
       <section>
-        <ContactForm />
-        {isLoading && !error && <b>Loading...</b>}
-        <Filter />
-        <ContactList />
+        {isLoading && !error ? (
+          <Loader />
+        ) : (
+          <>
+            <ContactForm />
+            <Filter />
+            <ContactList />
+          </>
+        )}
       </section>
     </div>
   );

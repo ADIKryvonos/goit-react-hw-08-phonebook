@@ -15,10 +15,10 @@ export const ContactList = () => {
     <List>
       {contacts.map(({ id, name, number }) => (
         <Item key={id}>
-          <IoIosContact />
+          <IoIosContact color="#0056b3" />
           {name} : {number}
           <Button type="button" onClick={() => dispatch(deleteContact(id))}>
-            <AiFillDelete />
+            <AiFillDelete color="#0056b3" />
           </Button>
         </Item>
       ))}
