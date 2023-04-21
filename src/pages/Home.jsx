@@ -9,7 +9,7 @@ export default function Home() {
   return isLoggedIn ? (
     <>
       <h1>
-        {userName}, you have {contacts.length} saved contacts
+        <b>{userName}</b>, you have {contacts.length} saved contacts
       </h1>
     </>
   ) : (
