@@ -1,10 +1,10 @@
-import { Link } from './UserNavigation.styled';
+import { AuthWrap, Link } from './UserNavigation.styled';
 
 export const AuthNav = () => {
   return (
-    <div>
+    <AuthWrap>
       <Link to="/register">Register</Link>
       <Link to="/login">Log In</Link>
-    </div>
+    </AuthWrap>
   );
 };

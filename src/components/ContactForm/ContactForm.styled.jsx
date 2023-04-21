@@ -22,6 +22,7 @@ export const Label = styled.label`
   font-size: 25px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 `;
 
 export const ErrorMessage = styled(Error)``;

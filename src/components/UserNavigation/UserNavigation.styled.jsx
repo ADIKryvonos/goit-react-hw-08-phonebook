@@ -12,15 +12,18 @@ export const HeaderWrap = styled.header`
 `;
 
 export const Link = styled(NavLink)`
-  padding: 8px 16px;
-  border-radius: 4px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
   text-decoration: none;
-  color: black;
-  font-weight: 500;
-
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
   &.active {
-    color: white;
-    background-color: orangered;
+    background-color: #0056b3;
   }
 `;
 
@@ -34,6 +37,10 @@ export const UserWrap = styled.div`
   display: flex;
 `;
 
+export const AuthWrap = styled.div`
+  gap: 10px;
+  display: flex;
+`;
 export const P = styled.p`
   padding: 8px 16px;
   text-decoration: none;
@@ -43,15 +50,17 @@ export const P = styled.p`
 `;
 
 export const Button = styled.button`
-  padding: 8px 16px;
-  border-radius: 4px;
-
-  color: white;
-  font-size: 14px;
-  background-color: orangered;
+  background-color: #007bff;
   border: none;
-
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
   &:hover {
-    color: black;
+    background-color: #0069d9;
   }
 `;
